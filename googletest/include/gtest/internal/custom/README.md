@@ -20,7 +20,10 @@ The following macros can be defined:
 *   `GTEST_LOG_(severity)`
 *   `GTEST_CHECK_(condition)`
 *   Functions `LogToStderr()` and `FlushInfoLog()` have to be provided too.
-
+###Example
+    GTEST_LOG_(INFO) << "This is an info message";
+    GTEST_LOG_(WARNING) << "This is a warning message";
+    GTEST_LOG_(ERROR) << "This is an error message";
 ### Threading:
 
 *   `GTEST_HAS_NOTIFICATION_` - Enabled if Notification is already provided.

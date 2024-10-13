@@ -63,6 +63,20 @@
   TEN_TESTS_(test_case_name_prefix##8)        \
   TEN_TESTS_(test_case_name_prefix##9)
 
+// Define a null value handling macro
+#define NULL_VALUE_CHECK(val) \
+  if ((val) == NULL) {        \
+    printf("Null value encountered.\n"); \
+    return;                   \
+  }
+
+// Define a macro for handling distance values
+#define CHECK_DISTANCE(distance, threshold) \
+  if ((distance) > (threshold)) {           \
+    printf("Distance exceeded threshold.\n"); \
+    return;                                 \
+  }
+
 // This macro defines 1000 dummy tests.
 #define THOUSAND_TESTS_(test_case_name_prefix) \
   HUNDRED_TESTS_(test_case_name_prefix##0)     \
